@@ -72,7 +72,6 @@ const ImageUploader = () => {
         {loading ? 'Uploading...' : 'Choose Image'}
         <input
           type="file"
-          
           accept="image/*"
           onChange={(e) => handleUpload(e.target.files[0])}
           disabled={loading}
