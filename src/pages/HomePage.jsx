@@ -12,12 +12,12 @@ export default function HomePage() {
       <section className="relative bg-white py-12 md:py-24 lg:py-32">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-5"></div>
         <div className="container relative z-10 mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             Welcome to the Image Analysis Workspace
           </h1>
-          <p className="mt-4 md:mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            A single, AI-powered image analysis platform that helps you extract insights from any image with just a
-            prompt.
+          <p className="text-xl text-gray-700 mb-8">
+            A single, AI-powered image analysis platform that helps you find insights and understand your visual
+            content.
           </p>
 
           <div className="mt-8 md:mt-12 max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8">
