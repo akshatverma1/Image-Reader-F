@@ -10,7 +10,7 @@ import LoginPage from "./pages/LoginPage"
 import SignupPage from "./pages/SignupPage"
 import SolutionsPage from "./pages/SolutionsPage"
 import CollaborationPage from "./pages/CollaborationPage"
-
+import Show from "./components/show.jsx"
 function App() {
   return (
     <Router>
@@ -26,6 +26,7 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/collaboration" element={<CollaborationPage />} />
+            <Route path="/show" element={<Show></Show>}></Route>
           </Routes>
         </main>
         <Footer />

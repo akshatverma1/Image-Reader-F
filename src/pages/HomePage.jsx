@@ -4,15 +4,70 @@ import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Textarea } from "../components/ui/textarea"
 import { Upload } from "lucide-react"
+import { useState ,useEffect} from "react";
 
 export default function HomePage() {
+
+
+  const [imageUrl, setImageUrl] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  // Cloudinary config (replace with your values)
+  const cloudName = 'ducospxbj'; // From Step 1
+  const uploadPreset = 'imagerader'; // From Step 2
+
+  const handleUpload = async (file) => {
+    try {
+      setLoading(true);
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('upload_preset', uploadPreset);
+
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+        { method: 'POST', body: formData }
+      );
+
+      if (!response.ok) throw new Error('Upload failed');
+
+      const data = await response.json();
+      setImageUrl(data.secure_url);
+      setError('');
+    } catch (err) {
+      setError('Failed to upload image');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const [data, setData] = useState([]);
+  let url = "http://localhost:3000/getResult";
+
+
+  useEffect(() => {
+    const apiCalling = async () => {
+      try {
+        const response = await fetch(url);
+        const oneapidata = await response.json();
+        console.log(oneapidata);
+        setData(oneapidata);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    apiCalling();
+  }, []);
+
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-white py-12 md:py-24 lg:py-32">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-5"></div>
         <div className="container relative z-10 mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             Welcome to the Image Analysis Workspace
           </h1>
           <p className="text-xl text-gray-700 mb-8">
@@ -25,25 +80,39 @@ export default function HomePage() {
               <div className="border-2 border-dashed border-gray-200 rounded-lg p-8 text-center">
                 <Upload className="h-10 w-10 mx-auto text-muted-foreground" />
                 <p className="mt-2 text-sm text-muted-foreground">Drag and drop your image here, or click to browse</p>
-                <Input type="file" className="hidden" id="image-upload" accept="image/*" />
-                <Button
-                  variant="outline"
-                  className="mt-4"
-                  onClick={() => document.getElementById("image-upload")?.click()}
-                >
-                  Upload Image
-                </Button>
+                {loading ? 'Uploading...' : ''}
+                <br></br>
+                <Input type="file" id="image-upload" accept="image/*"
+                  onChange={(e) => handleUpload(e.target.files[0])}
+                  disabled={loading} />
               </div>
+              {error && <p className="error">{error}</p>}
 
-              <Textarea
+              {imageUrl && (
+                <div className="preview">
+                  <img src={imageUrl} alt="Uploaded" />
+                </div>
+              )}
+              <form action="http://localhost:3000/request/" method="post">
+              <input
+                name="userName"
+                placeholder="Write a prompt about the image (e.g., 'Analyze the objects in this image')"
+                className="min-h-[100px] hidden"
+                value={imageUrl}
+              />
+               <Textarea
+                name="question"
                 placeholder="Write a prompt about the image (e.g., 'Analyze the objects in this image')"
                 className="min-h-[100px]"
               />
-
+              <br></br>
+              <br></br>
               <Button size="lg" className="w-full">
                 Submit
               </Button>
+              </form>
             </div>
+       
           </div>
 
           <div className="mt-8 flex justify-center space-x-4">
