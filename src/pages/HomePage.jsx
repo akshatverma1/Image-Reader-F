@@ -43,7 +43,7 @@ export default function HomePage() {
   };
 
   const [data, setData] = useState([]);
-  let url = "http://localhost:3000/getResult";
+  let url = "https://image-reader-b-sigma.vercel.app/getResult";
 
 
   useEffect(() => {
@@ -93,7 +93,7 @@ export default function HomePage() {
                   <img src={imageUrl} alt="Uploaded" />
                 </div>
               )}
-              <form action="http://localhost:3000/request/" method="post">
+              <form action="https://image-reader-b-sigma.vercel.app/request/" method="post">
               <input
                 name="userName"
                 placeholder="Write a prompt about the image (e.g., 'Analyze the objects in this image')"

@@ -3,7 +3,7 @@ import { Upload } from "lucide-react"
 import { useEffect,useState } from 'react';
 export default function show(){
     const [data,setData] = useState([]);
-    let url = "http://localhost:3000/getResult";
+    let url = "https://image-reader-b-sigma.vercel.app/getResult";
 
 
     useEffect(()=>{
