@@ -1,5 +1,5 @@
 "use client"
-import { Link } from "react-router-dom"
+import { Link ,useNavigate} from "react-router-dom"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Textarea } from "../components/ui/textarea"
@@ -7,7 +7,14 @@ import { Upload } from "lucide-react"
 import { useState ,useEffect} from "react";
 
 export default function HomePage() {
+ 
 
+
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/show"); // Navigates to the About component
+  };
 
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
@@ -107,7 +114,7 @@ export default function HomePage() {
               />
               <br></br>
               <br></br>
-              <Button size="lg" className="w-full">
+              <Button onClick={handleNavigation} size="lg" className="w-full">
                 Submit
               </Button>
               </form>
