@@ -1,20 +1,18 @@
 "use client"
-import { Link ,useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Textarea } from "../components/ui/textarea"
 import { Upload } from "lucide-react"
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
- 
+
 
 
   const navigate = useNavigate();
 
-  const handleNavigation = () => {
-    navigate("/show"); // Navigates to the About component
-  };
+
 
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
@@ -50,24 +48,27 @@ export default function HomePage() {
   };
 
   const [data, setData] = useState([]);
-  let url = "https://image-reader-b-sigma.vercel.app/getResult";
+  let url = "https://image-reader-b-sdg3.vercel.app/getResult";
+
+  const apiCalling = async () => {
+    try {
+      const response = await fetch(url);
+      const oneapidata = await response.json();
+      console.log(oneapidata);
+      setData(oneapidata);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  const handleNavigation = () => {
 
 
-  useEffect(() => {
-    const apiCalling = async () => {
-      try {
-        const response = await fetch(url);
-        const oneapidata = await response.json();
-        console.log(oneapidata);
-        setData(oneapidata);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+    // useEffect(() => {
+    
     apiCalling();
-  }, []);
+    // }, [data]);
 
-
+  }
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -100,27 +101,32 @@ export default function HomePage() {
                   <img src={imageUrl} alt="Uploaded" />
                 </div>
               )}
-              <form action="https://image-reader-b-sigma.vercel.app/request/" method="post">
-              <input
-                name="userName"
-                placeholder="Write a prompt about the image (e.g., 'Analyze the objects in this image')"
-                className="min-h-[100px] hidden"
-                value={imageUrl}
-              />
-               <Textarea
-                name="question"
-                placeholder="Write a prompt about the image (e.g., 'Analyze the objects in this image')"
-                className="min-h-[100px]"
-              />
-              <br></br>
-              <br></br>
-              <Button onClick={handleNavigation} size="lg" className="w-full">
-                Submit
-              </Button>
+              <form action="https://image-reader-b-sdg3.vercel.app/request" method="post">
+                <input
+                  name="userName"
+                  placeholder="Write a prompt about the image (e.g., 'Analyze the objects in this image')"
+                  className="min-h-[100px] hidden"
+                  value={imageUrl}
+                />
+                <Textarea
+                  name="question"
+                  placeholder="Write a prompt about the image (e.g., 'Analyze the objects in this image')"
+                  className="min-h-[100px]"
+                />
+                <br></br>
+                <br></br>
+                <Button  size="lg" className="w-full">
+                  Submit
+                </Button>
               </form>
+              <div className="grid gap-6">
+                <p >{data}</p>
+              </div>
             </div>
-       
+
           </div>
+
+
 
           <div className="mt-8 flex justify-center space-x-4">
             <Button variant="outline" asChild>
