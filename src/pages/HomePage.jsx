@@ -48,7 +48,7 @@ export default function HomePage() {
   };
 
   const [data, setData] = useState([]);
-  let url = "https://image-reader-b-sdg3.vercel.app/getResult";
+  let url = "http://localhost:3000/getResult";
 
   const apiCalling = async () => {
     try {
@@ -65,9 +65,11 @@ export default function HomePage() {
 
     // useEffect(() => {
     
-    apiCalling();
-    // }, [data]);
-
+    // apiCalling();
+    setTimeout(()=>{
+      navigate("/show");
+    },4000);
+    
   }
   return (
     <div className="flex flex-col min-h-screen">
@@ -115,7 +117,7 @@ export default function HomePage() {
                 />
                 <br></br>
                 <br></br>
-                <Button  size="lg" className="w-full">
+                <Button size="lg" className="w-full">
                   Submit
                 </Button>
               </form>

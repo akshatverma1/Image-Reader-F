@@ -3,27 +3,23 @@ import { Upload } from "lucide-react"
 import { useEffect, useState } from 'react';
 export default function show() {
   const [data, setData] = useState([]);
-  let url = "http://localhost:3000/getResult";
+  let url = "https://image-reader-b-sdg3.vercel.app/getResult";
 
-  for (let i = 1; i < 3; i++) {
-    useEffect(() => {
-      const apiCalling = async () => {
-        try {
-          const response = await fetch(url);
-          const oneapidata = await response.json();
-          console.log(oneapidata);
-          setData(oneapidata);
-        } catch (error) {
-          console.error("Error fetching data:", error);
-        }
-      };
-      apiCalling();
-    },[data]);
-    setTimeout(() => {
-      // console.log(ress);
-    }, 8000)
 
-  }
+  const apiCalling = async () => {
+    try {
+      const response = await fetch(url);
+      const oneapidata = await response.json();
+      console.log(oneapidata);
+      setData(oneapidata);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(()=>{
+    apiCalling();
+  },[])
 
 
   return (
