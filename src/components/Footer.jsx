@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
           <div className="col-span-2">
             <Link to="/" className="text-xl font-bold">
-              Image Reader
+            Aitextify
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
               Turn your images into insights with AI-powered analysis
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Image Reader. All rights reserved.
+            © {new Date().getFullYear()} Aitextify. All rights reserved.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
             {/* <Link to="/terms" className="text-xs text-muted-foreground hover:text-foreground">

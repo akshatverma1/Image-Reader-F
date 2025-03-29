@@ -15,9 +15,9 @@ export default function Header() {
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
             <div className="relative h-8 w-8 overflow-hidden rounded-md bg-primary">
-              <img src="/placeholder.svg?height=32&width=32" alt="Image Reader Logo" className="object-cover h-8 w-8" />
+              <img src="https://i.pinimg.com/736x/16/01/24/160124d73445562b300cb81bfdc815fc.jpg" alt="Image Reader Logo" className="object-cover h-8 w-8" />
             </div>
-            <span className="text-xl font-bold">Image Reader</span>
+            <span className="text-xl font-bold">Aitextify</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             <DropdownMenu>
