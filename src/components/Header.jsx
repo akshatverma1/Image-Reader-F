@@ -23,20 +23,21 @@ export default function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="flex items-center gap-1">
-                  Product <ChevronDown className="h-4 w-4" />
+                  {/* Product <ChevronDown className="h-4 w-4" /> */}
+                  <Link to="/product">Product</Link>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
+              {/* <DropdownMenuContent align="start">
                 <DropdownMenuItem asChild>
                   <Link to="/product">Overview</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                </DropdownMenuItem> */}
+                {/* <DropdownMenuItem asChild>
                   <Link to="/product/features">Features</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                </DropdownMenuItem> */}
+                {/* <DropdownMenuItem asChild>
                   <Link to="/product/pricing">Pricing</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
+                </DropdownMenuItem> */}
+              {/* </DropdownMenuContent> */}
             </DropdownMenu>
 
             <DropdownMenu>

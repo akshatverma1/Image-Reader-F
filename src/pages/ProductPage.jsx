@@ -17,19 +17,19 @@ export default function ProductPage() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Button asChild>
-                  <Link to="/signup">Get Started</Link>
+                  <Link to="/">Get Started</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/contact">Contact Sales</Link>
+                  <Link to="/contact">Contact</Link>
                 </Button>
               </div>
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden">
-              <img
+              {/* <img
                 src="/placeholder.svg?height=400&width=600"
                 alt="Image Reader Product"
                 className="object-cover w-full h-full"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ export default function ProductPage() {
               </ul>
 
               <Button className="mt-8 w-full" variant="outline" asChild>
-                <Link to="/signup">Get Started</Link>
+                <Link to="/">Get Started</Link>
               </Button>
             </div>
 
@@ -221,7 +221,7 @@ export default function ProductPage() {
               </ul>
 
               <Button className="mt-8 w-full" asChild>
-                <Link to="/signup">Get Started</Link>
+                <Link to="/">Get Started</Link>
               </Button>
             </div>
 

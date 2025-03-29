@@ -79,7 +79,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 9109621850</p>
                     <p className="text-muted-foreground">Mon-Fri, 9am-5pm EST</p>
                   </div>
                 </div>
@@ -90,8 +90,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Office</h3>
-                    <p className="text-muted-foreground">123 Innovation Drive</p>
-                    <p className="text-muted-foreground">San Francisco, CA 94103</p>
+                    <p className="text-muted-foreground">Indore,India</p>
+                    {/* <p className="text-muted-foreground">San Francisco, CA 94103</p> */}
                   </div>
                 </div>
               </div>
