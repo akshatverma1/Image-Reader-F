@@ -24,7 +24,12 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="flex items-center gap-1">
                   {/* Product <ChevronDown className="h-4 w-4" /> */}
-                  <Link to="/product">Product</Link>
+                  
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center gap-1">
+                  {/* Product <ChevronDown className="h-4 w-4" /> */}
                 </Button>
               </DropdownMenuTrigger>
               {/* <DropdownMenuContent align="start">
@@ -43,25 +48,14 @@ export default function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="flex items-center gap-1">
-                  Solutions <ChevronDown className="h-4 w-4" />
+                <Link to="/">Home</Link>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions">All Solutions</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/google-photos">Google Photos</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/vercel">Vercel</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/godaddy">GoDaddy</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+             
 
+            </DropdownMenu>
+            <Link to="/product" className="text-sm font-medium">Product</Link>
+            <Link to="/solutions" className="text-sm font-medium">Solutions</Link>
             <Link to="/collaboration" className="text-sm font-medium">
               Collaboration
             </Link>

@@ -22,12 +22,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/product/features" className="text-muted-foreground hover:text-foreground">
+                <Link to="/product" className="text-muted-foreground hover:text-foreground">
                   Features
                 </Link>
               </li>
               <li>
-                <Link to="/product/pricing" className="text-muted-foreground hover:text-foreground">
+                <Link to="/product" className="text-muted-foreground hover:text-foreground">
                   Pricing
                 </Link>
               </li>
@@ -37,17 +37,17 @@ export default function Footer() {
             <h3 className="text-sm font-medium">Solutions</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/solutions/google-photos" className="text-muted-foreground hover:text-foreground">
+                <Link to="/solutions" className="text-muted-foreground hover:text-foreground">
                   Google Photos
                 </Link>
               </li>
               <li>
-                <Link to="/solutions/vercel" className="text-muted-foreground hover:text-foreground">
+                <Link to="/solutions" className="text-muted-foreground hover:text-foreground">
                   Vercel
                 </Link>
               </li>
               <li>
-                <Link to="/solutions/godaddy" className="text-muted-foreground hover:text-foreground">
+                <Link to="/solutions" className="text-muted-foreground hover:text-foreground">
                   GoDaddy
                 </Link>
               </li>
@@ -79,7 +79,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Image Reader. All rights reserved.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link to="/terms" className="text-xs text-muted-foreground hover:text-foreground">
+            {/* <Link to="/terms" className="text-xs text-muted-foreground hover:text-foreground">
               Terms
             </Link>
             <Link to="/privacy" className="text-xs text-muted-foreground hover:text-foreground">
@@ -87,7 +87,7 @@ export default function Footer() {
             </Link>
             <Link to="/cookies" className="text-xs text-muted-foreground hover:text-foreground">
               Cookies
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

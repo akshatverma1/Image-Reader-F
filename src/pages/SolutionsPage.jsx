@@ -22,7 +22,7 @@ export default function SolutionsPage() {
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="h-48 relative rounded-lg overflow-hidden mb-6">
                 <img
-                  src="/placeholder.svg?height=192&width=384"
+                  src="https://lh3.googleusercontent.com/ZqBz-wfpqRAu1wH1QgFLVA6LxEmG838nyhgbVpw-P-AA_yyOvE1yor9z92YQnXusQ5-w2jqGRKQyi6EHP6Ve-ZL4v-HiCOV_yIQ_=e365-pa-nu-w1440-rw"
                   alt="Google Photos Integration"
                   className="object-cover w-full h-full"
                 />
@@ -33,7 +33,7 @@ export default function SolutionsPage() {
                 collection
               </p>
               <Button variant="link" asChild className="mt-4 p-0">
-                <Link to="/solutions/google-photos" className="flex items-center">
+                <Link to="/comingsoon" className="flex items-center">
                   Learn more <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -42,7 +42,7 @@ export default function SolutionsPage() {
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="h-48 relative rounded-lg overflow-hidden mb-6">
                 <img
-                  src="/placeholder.svg?height=192&width=384"
+                  src="https://1000logos.net/wp-content/uploads/2023/01/Godaddy-logo.png"
                   alt="GoDaddy Website Analysis"
                   className="object-cover w-full h-full"
                 />
@@ -52,7 +52,7 @@ export default function SolutionsPage() {
                 Optimize images on your GoDaddy-hosted website for better performance and SEO with our specialized tools
               </p>
               <Button variant="link" asChild className="mt-4 p-0">
-                <Link to="/solutions/godaddy" className="flex items-center">
+                <Link to="/comingsoon" className="flex items-center">
                   Learn more <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -61,7 +61,7 @@ export default function SolutionsPage() {
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="h-48 relative rounded-lg overflow-hidden mb-6">
                 <img
-                  src="/placeholder.svg?height=192&width=384"
+                  src="https://logowik.com/content/uploads/images/vercel1868.jpg"
                   alt="Vercel Deployment"
                   className="object-cover w-full h-full"
                 />
@@ -72,7 +72,7 @@ export default function SolutionsPage() {
                 capabilities
               </p>
               <Button variant="link" asChild className="mt-4 p-0">
-                <Link to="/solutions/vercel" className="flex items-center">
+                <Link to="/comingsoon" className="flex items-center">
                   Learn more <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

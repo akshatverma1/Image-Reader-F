@@ -102,7 +102,7 @@ export default function ContactPage() {
                   {["twitter", "facebook", "instagram", "linkedin"].map((social) => (
                     <a
                       key={social}
-                      href={`https://${social}.com/imagereader`}
+                      href="/comingsoon"
                       className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
                     >
                       <span className="sr-only">{social}</span>

@@ -24,11 +24,11 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden">
-              <img
+              {/* <img
                 src="/placeholder.svg?height=400&width=600"
                 alt="About Image Reader"
                 className="object-cover w-full h-full"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center">Our Story</h2>
           <div className="mt-12 max-w-3xl mx-auto">
             <p className="text-lg leading-relaxed">
-              Image Reader was founded in 2023 with a simple idea: make advanced image analysis accessible to everyone.
+              Image Reader was founded in 2025 with a simple idea: make advanced image analysis accessible to everyone.
               We noticed that while AI was making tremendous strides in understanding visual content, the tools
               available to everyday users were either too complex or too limited.
             </p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="bg-white py-16 md:py-24">
+      {/* <section className="bg-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center">Meet Our Team</h2>
           <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
@@ -92,7 +92,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Values Section */}
       <section className="bg-gray-50 py-16 md:py-24">
