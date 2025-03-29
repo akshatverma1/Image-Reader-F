@@ -1,6 +1,8 @@
 import React from 'react';
 import { Upload } from "lucide-react"
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from "./ui/button"
 export default function show() {
   const [data, setData] = useState([]);
   let url = "https://image-reader-b-sdg3.vercel.app/getResult";
@@ -38,10 +40,12 @@ export default function show() {
 
           <p >{data}</p>
 
-
+          <Button asChild className="hidden md:inline-flex">
+            <Link to="/">Re-Generated</Link>
+          </Button>
 
         </div>
-
+        
       </div>
       <br></br></>
   );
